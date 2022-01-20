@@ -1,0 +1,68 @@
+#root{
+    -fx-background-color: #333333;
+    -fx-font-family: monospace;
+    -fx-hgap: 1px;
+    -fx-vgap: 1px;
+}
+
+TextField{
+    -fx-text-fill: lightgrey;
+    -fx-text-align: right;
+    -fx-font-size: 25;
+    -fx-font-weight: bold;
+    -fx-padding: 10px;
+    -fx-background-color: transparent;
+    -fx-insets: 0px;
+}
+
+Button{
+    -fx-font-size: 16;
+    -fx-background-insets: 0px;
+    -fx-background-radius: 0px;
+}
+
+Button:focus{
+	-fx-border-color: white;
+}
+
+Button:armed{
+    -fx-border-color: yellow;
+}
+
+#boton1, #boton2, #boton3, #boton4, #boton5, #boton6, #boton7, #boton8, #boton9, #boton0, #botonDecimal{
+    -fx-text-fill: white;
+    -fx-background-color: darkgray;
+}
+#boton1:hover, #boton2:hover, #boton3:hover, #boton4:hover, #boton5:hover, #boton6:hover, #boton7:hover, #boton8:hover, #boton9:hover, #boton0:hover, #botonDecimal:hover{
+    -fx-text-fill: darkgray;
+    -fx-background-color: white;
+}
+#boton1:pressed, #boton2:pressed, #boton3:pressed, #boton4:pressed, #boton5:pressed, #boton6:pressed, #boton7:pressed, #boton8:pressed, #boton9:pressed, #boton0:pressed, #botonDecimal:pressed{
+    -fx-text-fill: lightgray;
+    -fx-background-color: black;
+}
+#botonBorrar, #botonBorrarTodo{
+    -fx-text-fill: black;
+    -fx-background-color: lightgray;
+}
+#botonBorrar:hover, #botonBorrarTodo:hover{
+    -fx-background-color: white;
+}
+#botonBorrar:pressed, #botonBorrarTodo:pressed{
+    -fx-text-fill: lightgray;
+    -fx-background-color: black;
+}
+#botonSumar, #botonRestar, #botonMultiplicar, #botonDividir{
+    -fx-text-fill: white;
+    -fx-background-color: orange;
+}
+#botonSumar:hover:default, #botonRestar:hover:default, #botonMultiplicar:hover:default, #botonDividir:hover:default{
+    -fx-background-color: red;
+}
+#botonSumar:pressed, #botonRestar:pressed, #botonMultiplicar:pressed, #botonDividir:pressed{
+    -fx-text-fill: orange;
+    -fx-background-color: white;
+}
+#botonIgual:default{
+    -fx-background-color: orangered;
+}

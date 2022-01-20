@@ -1,10 +1,10 @@
-package calculadorafxml;
+package calculadoraCSS;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 /**
- * Implementación de la lógica de una calculadora.
+ * Implementaciï¿½n de la lï¿½gica de una calculadora.
  * 
  * @author Fran Vargas
  */
@@ -44,7 +44,7 @@ public class Calculadora {
 	}
 
 	/**
-	 * Inicializa por completo la calculadora, borrando la información que tiene
+	 * Inicializa por completo la calculadora, borrando la informaciï¿½n que tiene
 	 * memorizada y la pantalla.
 	 */
 	public void borrar() {
@@ -54,7 +54,7 @@ public class Calculadora {
 	}
 
 	/**
-	 * Borra lo que hay en la pantalla (el último operando introducido).
+	 * Borra lo que hay en la pantalla (el ï¿½ltimo operando introducido).
 	 */
 	public void borrarTodo() {
 		nuevoOperando = true;
@@ -63,9 +63,9 @@ public class Calculadora {
 	}
 
 	/**
-	 * Indica a la calculadora que realice la operación indicada.
+	 * Indica a la calculadora que realice la operaciï¿½n indicada.
 	 * 
-	 * @param operador Operación a realizar; usar una constante: IGUAL, SUMAR,
+	 * @param operador Operaciï¿½n a realizar; usar una constante: IGUAL, SUMAR,
 	 *                 RESTAR, MULTIPLCIAR, DIVIDIR.
 	 */
 	public void operar(char operador) {
@@ -104,7 +104,7 @@ public class Calculadora {
 	}
 
 	/**
-	 * Inserta un dígito en el operando actual (pantalla).
+	 * Inserta un dï¿½gito en el operando actual (pantalla).
 	 * 
 	 * @param digito Digito a introducir en la pantalla.
 	 */

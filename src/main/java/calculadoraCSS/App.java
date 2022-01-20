@@ -1,7 +1,8 @@
-package calculadorafxml;
+package calculadoraCSS;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class App extends Application {
@@ -14,10 +15,11 @@ public class App extends Application {
 		controladorCalculadora = new Controlador();
 		
 		Scene scene = new Scene(controladorCalculadora.getView());
-		
 		primaryStage.setTitle("Calculadora");
+		primaryStage.getIcons().add(new Image("/imagen/calculator-32x32.png"));
 		primaryStage.setScene(scene);
 		primaryStage.show();
+		
 		
 	}
 

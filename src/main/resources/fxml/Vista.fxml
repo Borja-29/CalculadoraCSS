@@ -2,13 +2,15 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<GridPane fx:id="root" hgap="5.0" maxWidth="350.0" prefHeight="220.0" vgap="5.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane fx:id="root" prefHeight="350.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <rowConstraints>
       <RowConstraints fillHeight="false" vgrow="NEVER" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
@@ -24,13 +26,21 @@
       <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
    </columnConstraints>
    <children>
-      <TextField fx:id="resText" alignment="CENTER_RIGHT" disable="true" editable="false" promptText="0.0" GridPane.columnSpan="5">
+      <TextField fx:id="resText" alignment="CENTER_RIGHT" editable="false" promptText="0.0" GridPane.columnSpan="5">
          <font>
             <Font size="18.0" />
          </font>
          <padding>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </padding>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem fx:id="menuModerna" mnemonicParsing="false" onAction="#onMenuModernaAction" text="Moderna" />
+                  <MenuItem fx:id="menuClasica" mnemonicParsing="false" onAction="#onMenuClasicaAction" text="Clásica" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
       </TextField>
       <Button fx:id="boton1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onPulsarAction" text="1" GridPane.rowIndex="3" />
       <Button fx:id="boton2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onPulsarAction" text="2" GridPane.columnIndex="1" GridPane.rowIndex="3" />

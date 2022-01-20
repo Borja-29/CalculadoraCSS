@@ -1,4 +1,4 @@
-package calculadorafxml;
+package calculadoraCSS;
 
 import java.io.IOException;
 import java.net.URL;
@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 
@@ -15,7 +16,7 @@ public class Controlador implements Initializable{
 
 	// Modelo
 	private Calculadora calculadora = new Calculadora();
-	
+	private String css;
 	// Vista
 	@FXML
 	private GridPane root;
@@ -59,6 +60,10 @@ public class Controlador implements Initializable{
 	private Button botonBorrarTodo;
 	@FXML
 	private Button botonDecimal;
+	@FXML
+	private MenuItem menuModerna;
+	@FXML
+	private MenuItem menuClasica;
 	
 	public Controlador() throws IOException {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Vista.fxml"));
@@ -71,13 +76,29 @@ public class Controlador implements Initializable{
 		return root;
 	}
 	
-
+ 
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		
 		resText.textProperty().bind(calculadora.getResultado());
+		css = this.getClass().getResource("/css/Clasica.css").toExternalForm();
+		root.getStylesheets().add(css);
+	}
+
+	@FXML
+	public void onMenuModernaAction(ActionEvent event) {
+		root.getStylesheets().clear();
+		css = this.getClass().getResource("/css/Moderna.css").toExternalForm();
+		root.getStylesheets().add(css);
 		
+	}
+	
+	@FXML
+	public void onMenuClasicaAction(ActionEvent event) {
+		root.getStylesheets().clear();
+		css = this.getClass().getResource("/css/Clasica.css").toExternalForm();
+		root.getStylesheets().add(css);
 	}
 
 	@FXML
